@@ -3,12 +3,27 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  @font-face {
+     font-family: 'Aeonik-medium';
+     src: url(Aeonik-Medium.otf);
+   }
+   @font-face {
+     font-family: 'Aeonik';
+     src: url(Aeonik-Regular.otf);
+    }
 body {
   margin: 0 auto;
   max-width: 800px;
   padding: 0 20px;
+  /* background-color: rgb(228, 221, 214); */
+  background-image: url(https://github.com/KumarSashank/Code-files/blob/master/bg2.png?raw=true);
+  opacity: 0.95;
 }
-
+b{
+  font-family:'Aeonik';
+  font-size: 20px;
+  color: rgb(104, 202, 154);
+}
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
@@ -19,7 +34,7 @@ body {
 
 .darker {
   border-color: #ccc;
-  background-color: #ddd;
+  background-color: rgb(255, 255, 255);
 }
 
 .container::after {
@@ -43,7 +58,7 @@ body {
 }
 
 .time-right {
-  float: right;
+  float: left;
   color: #aaa;
 }
 
@@ -51,25 +66,28 @@ body {
   float: left;
   color: #999;
 }
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+h2.heading{
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: 'Aeonik-medium';
+  color: rgb(101, 98, 95);
+}
 </style>
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 </head>
 <body>
-
-<h2>{{room}} - DjChat</h2>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<h2 class="heading" align="center">{{room}} -Group8</h2>
 <div id="display">
-
-<!-- <div class="container darker">
-  <b>Tom</b><p>Hello Everyone, How Are You Guys Doing?</p>
-  <span class="time-left">20th, April 2021</span>
-</div> -->
-
 </div>
-
 <script>
 $(document).ready(function(){
-
 setInterval(function(){
     $.ajax({
         type: 'GET',
@@ -90,8 +108,6 @@ setInterval(function(){
 },1000);
 })
 </script>
-
-
 <div class="container">
     <style>
     input[type=text], select {
@@ -103,7 +119,6 @@ setInterval(function(){
     border-radius: 4px;
     box-sizing: border-box;
     }
-
     input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
@@ -114,11 +129,9 @@ setInterval(function(){
     border-radius: 4px;
     cursor: pointer;
     }
-
     input[type=submit]:hover {
     background-color: #45a049;
     }
-
     div {
     border-radius: 5px;
     background-color: #f2f2f2;
